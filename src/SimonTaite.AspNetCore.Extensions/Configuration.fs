@@ -6,11 +6,11 @@ open Microsoft.Extensions.Configuration.Json
 
 module FileConfiguration =
 
-    let getFileLoadExceptionHandler =
-        FileConfigurationExtensions.GetFileLoadExceptionHandler
+    let getFileLoadExceptionHandler builder =
+        FileConfigurationExtensions.GetFileLoadExceptionHandler builder
 
-    let getFileProvider =
-        FileConfigurationExtensions.GetFileProvider
+    let getFileProvider builder =
+        FileConfigurationExtensions.GetFileProvider builder
 
     let setBasePath path config =
         FileConfigurationExtensions.SetBasePath(config, path)

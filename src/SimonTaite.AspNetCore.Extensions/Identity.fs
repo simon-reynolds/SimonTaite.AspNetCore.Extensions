@@ -5,14 +5,14 @@ open Microsoft.Extensions.DependencyInjection
 
 module Identity =
 
-    let addDefaultIdentity =
-        IdentityServiceCollectionUIExtensions.AddDefaultIdentity
+    let addDefaultIdentity<'TUser when 'TUser : not struct> services =
+        IdentityServiceCollectionUIExtensions.AddDefaultIdentity<'TUser> services
 
-    let addDefaultIdentityOptions options services =
-        IdentityServiceCollectionUIExtensions.AddDefaultIdentity(services, options)
+    let addDefaultIdentityOptions<'TUser when 'TUser : not struct> options services =
+        IdentityServiceCollectionUIExtensions.AddDefaultIdentity<'TUser>(services, options)
 
-    let addDefaultUI =
-        IdentityBuilderUIExtensions.AddDefaultUI
+    let addDefaultUI builder =
+        IdentityBuilderUIExtensions.AddDefaultUI builder
 
     let addDefaultUIFramework framework builder =
         IdentityBuilderUIExtensions.AddDefaultUI(builder, framework)

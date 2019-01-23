@@ -6,20 +6,20 @@ open Microsoft.AspNetCore.Builder
 
 module ApplicationBuilder =
 
-    let useDeveloperExceptionPage =
-        DeveloperExceptionPageExtensions.UseDeveloperExceptionPage
+    let useDeveloperExceptionPage  app=
+        DeveloperExceptionPageExtensions.UseDeveloperExceptionPage app
 
     let useDeveloperExceptionPageOptions options app =
         DeveloperExceptionPageExtensions.UseDeveloperExceptionPage(app, options)
 
-    let useDatabaseErrorPage =
-        DatabaseErrorPageExtensions.UseDatabaseErrorPage
+    let useDatabaseErrorPage app =
+        DatabaseErrorPageExtensions.UseDatabaseErrorPage app
 
     let useDatabaseErrorPageOptions options app =
         DatabaseErrorPageExtensions.UseDatabaseErrorPage(app, options)
 
-    let useExceptionHandler =
-        ExceptionHandlerExtensions.UseExceptionHandler
+    let useExceptionHandler app =
+        ExceptionHandlerExtensions.UseExceptionHandler app
 
     let useExceptionHandlerPath (path:string) app =
         ExceptionHandlerExtensions.UseExceptionHandler(app, path)
@@ -30,12 +30,12 @@ module ApplicationBuilder =
     let useExceptionHandlerOptions (options:ExceptionHandlerOptions) app =
         ExceptionHandlerExtensions.UseExceptionHandler(app, options)
 
-    let useHsts = HstsBuilderExtensions.UseHsts
+    let useHsts app = HstsBuilderExtensions.UseHsts app
 
-    let useHttps = HttpsPolicyBuilderExtensions.UseHttpsRedirection
+    let useHttps app = HttpsPolicyBuilderExtensions.UseHttpsRedirection app
 
-    let useStaticFiles =
-        StaticFileExtensions.UseStaticFiles
+    let useStaticFiles app =
+        StaticFileExtensions.UseStaticFiles app
 
     let useStaticFilesPath (requestPath:string) app =
         StaticFileExtensions.UseStaticFiles(app, requestPath)
@@ -43,18 +43,18 @@ module ApplicationBuilder =
     let useStaticFilesOptions (options:StaticFileOptions) app =
         StaticFileExtensions.UseStaticFiles(app, options)
 
-    let useCookiePolicy =
-        CookiePolicyAppBuilderExtensions.UseCookiePolicy
+    let useCookiePolicy app =
+        CookiePolicyAppBuilderExtensions.UseCookiePolicy app
 
     let useCookiePolicyOptions options app =
         CookiePolicyAppBuilderExtensions.UseCookiePolicy(app, options)
 
-    let useAuthentication = AuthAppBuilderExtensions.UseAuthentication
+    let useAuthentication app = AuthAppBuilderExtensions.UseAuthentication app
 
-    let useMvc = MvcApplicationBuilderExtensions.UseMvc
+    let useMvc app = MvcApplicationBuilderExtensions.UseMvc app
 
     let useMvcWithRoutes configureRoutes app =
         MvcApplicationBuilderExtensions.UseMvc(app, configureRoutes)
 
-    let useMvcWithDefaultRoute =
-        MvcApplicationBuilderExtensions.UseMvcWithDefaultRoute
+    let useMvcWithDefaultRoute app =
+        MvcApplicationBuilderExtensions.UseMvcWithDefaultRoute app

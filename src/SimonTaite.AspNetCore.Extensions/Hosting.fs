@@ -4,29 +4,29 @@ open Microsoft.Extensions.Hosting
 
 module HostingEnvironment =
 
-    let isDevelopment = HostingEnvironmentExtensions.IsDevelopment
-    let isEnvironment = HostingEnvironmentExtensions.IsEnvironment
-    let isProduction = HostingEnvironmentExtensions.IsProduction
-    let isStaging = HostingEnvironmentExtensions.IsStaging
+    let isDevelopment env = HostingEnvironmentExtensions.IsDevelopment(env)
+    let isEnvironment environmentName env = HostingEnvironmentExtensions.IsEnvironment(env, environmentName)
+    let isProduction env = HostingEnvironmentExtensions.IsProduction(env)
+    let isStaging env = HostingEnvironmentExtensions.IsStaging(env)
 
 module HostBuilder =
 
-    let start = HostingAbstractionsHostBuilderExtensions.Start
+    let start hostbuilder = HostingAbstractionsHostBuilderExtensions.Start hostbuilder
 
 
 module Host =
 
-    let run = HostingAbstractionsHostExtensions.Run
+    let run host = HostingAbstractionsHostExtensions.Run host
     let runAsync host token =
         let task = HostingAbstractionsHostExtensions.RunAsync(host, token)
         Async.AwaitTask task
 
-    let start = HostingAbstractionsHostExtensions.Start
+    let start host = HostingAbstractionsHostExtensions.Start host
     let stopAsync host timeout =
         let task = HostingAbstractionsHostExtensions.StopAsync(host, timeout)
         Async.AwaitTask task
 
-    let waitForShutdown = HostingAbstractionsHostExtensions.WaitForShutdown
+    let waitForShutdown host = HostingAbstractionsHostExtensions.WaitForShutdown host
 
     let waitForShutdownAsync host =
         let task = HostingAbstractionsHostExtensions.WaitForShutdownAsync host
