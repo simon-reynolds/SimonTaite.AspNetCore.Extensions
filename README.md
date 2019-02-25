@@ -8,8 +8,8 @@
 
 MacOS/Linux | Windows
 --- | ---
-[![Travis Badge](https://travis-ci.org/simontaite/SimonTaite.AspNetCore.Extensions.svg?branch=master)](https://travis-ci.org/simontaite/SimonTaite.AspNetCore.Extensions) | [![Build status](https://ci.appveyor.com/api/projects/status/github/simontaite/SimonTaite.AspNetCore.Extensions?svg=true)](https://ci.appveyor.com/project/simontaite/SimonTaite.AspNetCore.Extensions)
-[![Build History](https://buildstats.info/travisci/chart/simontaite/SimonTaite.AspNetCore.Extensions)](https://travis-ci.org/simontaite/SimonTaite.AspNetCore.Extensions/builds) | [![Build History](https://buildstats.info/appveyor/chart/simontaite/SimonTaite.AspNetCore.Extensions)](https://ci.appveyor.com/project/simontaite/SimonTaite.AspNetCore.Extensions)  
+[![Travis Badge](https://travis-ci.org/simontaite/SimonTaite.AspNetCore.Extensions.svg?branch=master)](https://travis-ci.org/simontaite/SimonTaite.AspNetCore.Extensions) | [![Build status](https://ci.appveyor.com/api/projects/status/github/simontaite/SimonTaite.AspNetCore.Extensions?svg=true)](https://ci.appveyor.com/project/simontaite/simontaite-aspnetcore-extensions)
+[![Build History](https://buildstats.info/travisci/chart/simontaite/SimonTaite.AspNetCore.Extensions)](https://travis-ci.org/simontaite/SimonTaite.AspNetCore.Extensions/builds) | [![Build History](https://buildstats.info/appveyor/chart/simontaite/simontaite-aspnetcore-extensions)](https://ci.appveyor.com/project/simontaite/simontaite-aspnetcore-extensions)  
 
 
 ## Nuget 
