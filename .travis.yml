@@ -13,7 +13,7 @@ os:
   - linux
 
 script:
-  - ./build.sh
+  - travis_wait ./build.sh
 
 matrix:
   fast_finish: true
